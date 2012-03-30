@@ -21,13 +21,12 @@ else
         {
             if (string.IsNullOrEmpty(Html.Label(prop.PropertyName).ToHtmlString()) == false)
             {
-                <div class="editor-label">
+                <div class="display-label">
                     @Html.Label(prop.PropertyName) 
                 </div>
             }
-            <div class="editor-field">
-                @Html.Editor(prop.PropertyName)  
-                @Html.ValidationMessage(prop.PropertyName) 
+            <div class="display-field">
+                @Html.Display(prop.PropertyName)  
             </div>
         }
     }
