@@ -14,7 +14,7 @@ namespace SampleApplication.Movies.ViewModels.Metadata
                 .NullDisplayText("---Please Select---")
                 .Required();
 
-            Configure(x => x.Year)
+            Configure(x => x.Years)
                 .AsDropDownList(html => html.Action("Years", "List"))
                 .DisplayName("Year")
                 .NullDisplayText("---Please Select---")

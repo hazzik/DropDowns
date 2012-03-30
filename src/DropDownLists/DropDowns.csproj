@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DropDownListActionAttribute.cs" />
+    <Compile Include="SelectListActionAttribute.cs" />
     <Compile Include="DropDownListSettings.cs" />
     <Compile Include="ModelMetadataDropDownSettings.cs" />
     <Compile Include="ModelMetadataItemBuilderAsDropDownList.cs" />

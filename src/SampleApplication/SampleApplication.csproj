@@ -156,12 +156,17 @@
   <ItemGroup>
     <Content Include="Views\Shared\EditorTemplates\String.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\Shared\EditorTemplates\Object.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DropDownLists\DropDowns.csproj">
       <Project>{8FCC16D2-15B4-4984-A05B-3D5749F9B9FF}</Project>
       <Name>DropDowns</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\ListBox.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -2,11 +2,11 @@ using System.Web.Mvc;
 
 namespace MvcExtensions.DropDowns
 {
-    public class DropDownListActionAttribute : ActionFilterAttribute
+    public class SelectListActionAttribute : ActionFilterAttribute
     {
-        private const string DefaultKey = "key";
+        private const string DefaultSelectedArgumentName = "selected";
 
-        public string Key { get; set; }
+        public string SelectedArgumentName { get; set; }
 
         public override void OnActionExecuted(ActionExecutedContext context)
         {
@@ -16,7 +16,7 @@ namespace MvcExtensions.DropDowns
 
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            context.ActionParameters[Key ?? DefaultKey] = GetKeyValue(context);
+            context.ActionParameters[SelectedArgumentName ?? DefaultSelectedArgumentName] = GetSelectedValue(context);
         }
 
         private static void CopyViewDataProperties(ViewDataDictionary source, ViewDataDictionary destination)
@@ -35,7 +35,7 @@ namespace MvcExtensions.DropDowns
             return null;
         }
 
-        private static object GetKeyValue(ControllerContext context)
+        private static object GetSelectedValue(ControllerContext context)
         {
             var viewData = context.ParentActionViewContext.ViewData;
             return GetAttemptedValue(viewData) ?? viewData.Model;
