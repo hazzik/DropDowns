@@ -10,12 +10,12 @@ namespace SampleApplication.Movies.ViewModels.Metadata
         {
             Configure(x => x.GenreId)
                 .DisplayName("Genre")
-                .AsDropDownList(html => html.Action("Genres", "List"))
+                .RenderPartial(html => html.Action("Genres", "List"))
                 .NullDisplayText("---Please Select---")
                 .Required();
 
             Configure(x => x.Years)
-                .AsDropDownList(html => html.Action("Years", "List"))
+                .RenderPartial(html => html.Action("Years", "List"))
                 .DisplayName("Year")
                 .NullDisplayText("---Please Select---")
                 .Required();

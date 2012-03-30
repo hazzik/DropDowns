@@ -46,9 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SelectListActionAttribute.cs" />
-    <Compile Include="DropDownListSettings.cs" />
-    <Compile Include="ModelMetadataDropDownSettings.cs" />
-    <Compile Include="ModelMetadataItemBuilderAsDropDownList.cs" />
+    <Compile Include="RenderPartialSettings.cs" />
+    <Compile Include="ModelMetadataRenderPartialSettings.cs" />
+    <Compile Include="ModelMetadataItemBuilderRenderPartial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

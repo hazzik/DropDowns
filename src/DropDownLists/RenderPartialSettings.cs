@@ -4,7 +4,7 @@ using System.Web.Mvc;
 
 namespace MvcExtensions.DropDowns
 {
-    public class DropDownListSettings : IModelMetadataAdditionalSetting
+    public class RenderPartialSettings : IModelMetadataAdditionalSetting
     {
         public Func<HtmlHelper, IHtmlString> Action { get; set; }
     }
