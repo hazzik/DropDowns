@@ -26,8 +26,7 @@ namespace SampleApplication.Movies
         [ChildActionOnly, SelectListAction]
         public ActionResult Years(IEnumerable<int> selected)
         {
-            var model = new MultiSelectList(Enumerable.Range(1990, 20).Select(y => new {Value = y}),
-                                            "Value", "Value", selected);
+            var model = new MultiSelectList(Enumerable.Range(1990, 20), selected);
 
             return PartialView("ListBox", model);
         }
