@@ -7,5 +7,7 @@ namespace SampleApplication.Movies.ViewModels
         public int GenreId { get; set; }
 
         public IEnumerable<int> Years { get; set; }
+
+        public string Text { get; set; } 
     }
 }

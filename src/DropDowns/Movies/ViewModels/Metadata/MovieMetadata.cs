@@ -3,6 +3,8 @@ using MvcExtensions;
 
 namespace SampleApplication.Movies.ViewModels.Metadata
 {
+    using System;
+
     public class MovieMetadata : ModelMetadataConfiguration<Movie>
     {
         public MovieMetadata()
@@ -18,6 +20,10 @@ namespace SampleApplication.Movies.ViewModels.Metadata
                 .DisplayName("Year")
                 .NullDisplayText("---Please Select---")
                 .Required();
+
+            Configure(x => x.Text)
+                .DisplayName("Please enter \"PRG\" into this field to test Post-Redirect-Get scenario")
+                .Validate(x => !string.Equals(x, "PRG", StringComparison.OrdinalIgnoreCase), "As you can see values in the select elements are sucessfuly restored after redirect.");
         }
     }
 }
