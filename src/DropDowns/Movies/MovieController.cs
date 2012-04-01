@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Web.Mvc;
-using MvcExtensions;
-using SampleApplication.Movies.ViewModels;
-
-namespace SampleApplication.Movies
+﻿namespace SampleApplication.Movies
 {
+    using System.Collections.Generic;
+    using System.Threading;
+    using System.Web.Mvc;
+    using MvcExtensions;
+    using ViewModels;
+
     public class MovieController : Controller
     {
         private static readonly IDictionary<int, Movie> Movies = new Dictionary<int, Movie>();
@@ -19,11 +19,13 @@ namespace SampleApplication.Movies
         }
 
         [HttpPost]
-        [ExportViewDataToTempData]
         public ActionResult Create(Movie movie)
         {
             if (!ModelState.IsValid)
+            {
+                ExportViewDataToTempData();
                 return RedirectToAction("Create");
+            }
 
             var id = Save(movie);
 
@@ -48,6 +50,11 @@ namespace SampleApplication.Movies
             Interlocked.Increment(ref UniqueKey);
             Movies.Add(UniqueKey, movie);
             return UniqueKey;
+        }
+
+        private void ExportViewDataToTempData()
+        {
+            TempData[ViewDataTempDataTransferAttribute.DefaultKey] = new ViewDataDictionary(ViewData);
         }
     }
 }
