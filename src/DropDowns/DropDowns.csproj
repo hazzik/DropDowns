@@ -44,10 +44,10 @@
       <HintPath>..\..\packages\Castle.Windsor.3.0.0.4001\lib\net40\Castle.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="MvcExtensions, Version=2.5.0.0, Culture=neutral, PublicKeyToken=ee6190c4449c24bc, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvcExtensions.2.5.0-rc7\lib\net40\MvcExtensions.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.2.5.0-rc8000\lib\net40\MvcExtensions.dll</HintPath>
     </Reference>
     <Reference Include="MvcExtensions.Windsor, Version=2.5.0.0, Culture=neutral, PublicKeyToken=ee6190c4449c24bc, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvcExtensions.Windsor3.2.5.0-rc7\lib\net40\MvcExtensions.Windsor.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.Windsor3.2.5.0-rc8000\lib\net40\MvcExtensions.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages" />
